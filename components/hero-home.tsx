@@ -1,5 +1,6 @@
 import VideoThumb from "@/public/images/hero-image-01.jpg";
 import ModalVideo from "@/components/modal-video";
+import GlobeAnimation from "./Globe";
 
 export default function HeroHome() {
   return (
@@ -49,7 +50,11 @@ export default function HeroHome() {
             </div>
           </div>
 
-          <ModalVideo
+          <div className="flex justify-center items-center">
+            <GlobeAnimation />
+          </div>
+
+          {/* <ModalVideo
             thumb={VideoThumb}
             thumbWidth={1104}
             thumbHeight={576}
@@ -57,7 +62,7 @@ export default function HeroHome() {
             video="videos//video.mp4"
             videoWidth={1920}
             videoHeight={1080}
-          />
+          /> */}
         </div>
       </div>
     </section>
