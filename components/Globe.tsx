@@ -56,6 +56,8 @@ export default function GlobeAnimation() {
         window.addEventListener('resize', onResize)
         onResize()
 
+        console.log(canvasRef.current?.offsetWidth)
+
         const globe = createGlobe(canvasRef.current!, {
             devicePixelRatio: 2,
             width: width * 2,
@@ -77,10 +79,10 @@ export default function GlobeAnimation() {
                 { location: [28.679079, 77.069710], size: 0.06 },
             ],
             scale: 2.5,
-            offset: [0, width * 2 * 0.4 * 0.5],
+            offset: [0, width * 2 * 0.4 * (width > 600 ? 0.5 : 0.6)],
             onRender: (state) => {
-                state.width = width * 2
-                state.height = width * 2 * 0.4
+                state.width = width * 2 
+                state.height = width * 2 * (width > 600 ? 0.4 : 0.45)
 
                 state.phi = phi;
                 phi += 0.001;

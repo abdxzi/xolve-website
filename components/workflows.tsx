@@ -1,7 +1,9 @@
 import Image from "next/image";
-import WorflowImg01 from "@/public/images/workflow-01.png";
-import WorflowImg02 from "@/public/images/workflow-02.png";
-import WorflowImg03 from "@/public/images/workflow-03.png";
+
+import WorflowImg01 from "@/public/images/workflow-1.png";
+import WorflowImg02 from "@/public/images/workflow-2.jpg";
+import WorflowImg03 from "@/public/images/workflow-3.png";
+
 import Spotlight from "@/components/spotlight";
 
 export default function Workflows() {
@@ -52,7 +54,7 @@ export default function Workflows() {
                 </div>
                 {/* Image */}
                 <Image
-                  className="inline-flex"
+                  className="inline-flex w-full object-cover mix-blend-luminosity"
                   src={WorflowImg01}
                   width={350}
                   height={288}
@@ -63,13 +65,12 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Built-in Tools
+                        Telegram bots & miniapps
                       </span>
                     </span>
                   </div>
                   <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                  Boost trading with advanced Telegram bots for automated strategies and real-time updates, alongside custom bots for enhanced communication
                   </p>
                 </div>
               </div>
@@ -99,7 +100,7 @@ export default function Workflows() {
                 </div>
                 {/* Image */}
                 <Image
-                  className="inline-flex"
+                  className="inline-flex w-full object-cover mix-blend-lighten"
                   src={WorflowImg02}
                   width={350}
                   height={288}
@@ -110,13 +111,12 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Scale Instantly
+                        Chat bots
                       </span>
                     </span>
                   </div>
                   <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                  Boost customer interactions with intelligent chatbots that provide instant support and automate responses across platforms.
                   </p>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function Workflows() {
                 </div>
                 {/* Image */}
                 <Image
-                  className="inline-flex"
+                  className="inline-flex w-full object-cover mix-blend-lighten"
                   src={WorflowImg03}
                   width={350}
                   height={288}
@@ -157,13 +157,12 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Tailored Flows
+                        Smart contracts
                       </span>
                     </span>
                   </div>
                   <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                  Leverage secure, efficient smart contracts tailored to optimize business workflows and ensure seamless decentralized transactions.
                   </p>
                 </div>
               </div>
