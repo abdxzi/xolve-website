@@ -3,29 +3,31 @@
 import { useState } from "react";
 import useMasonry from "@/utils/useMasonry";
 import Image, { StaticImageData } from "next/image";
-import TestimonialImg01 from "@/public/images/testimonial-01.jpg";
-import TestimonialImg02 from "@/public/images/testimonial-02.jpg";
-import TestimonialImg03 from "@/public/images/testimonial-03.jpg";
-import TestimonialImg04 from "@/public/images/testimonial-04.jpg";
-import TestimonialImg05 from "@/public/images/testimonial-05.jpg";
-import TestimonialImg06 from "@/public/images/testimonial-06.jpg";
-import TestimonialImg07 from "@/public/images/testimonial-07.jpg";
-import TestimonialImg08 from "@/public/images/testimonial-08.jpg";
-import TestimonialImg09 from "@/public/images/testimonial-09.jpg";
-import ClientImg01 from "@/public/images/client-logo-01.svg";
-import ClientImg02 from "@/public/images/client-logo-02.svg";
-import ClientImg03 from "@/public/images/client-logo-03.svg";
-import ClientImg04 from "@/public/images/client-logo-04.svg";
-import ClientImg05 from "@/public/images/client-logo-05.svg";
-import ClientImg06 from "@/public/images/client-logo-06.svg";
-import ClientImg07 from "@/public/images/client-logo-07.svg";
-import ClientImg08 from "@/public/images/client-logo-08.svg";
-import ClientImg09 from "@/public/images/client-logo-09.svg";
+// import TestimonialImg01 from "@/public/images/testimonial-01.jpg";
+// import TestimonialImg02 from "@/public/images/testimonial-02.jpg";
+// import TestimonialImg03 from "@/public/images/testimonial-03.jpg";
+// import TestimonialImg04 from "@/public/images/testimonial-04.jpg";
+// import TestimonialImg05 from "@/public/images/testimonial-05.jpg";
+// import TestimonialImg06 from "@/public/images/testimonial-06.jpg";
+// import TestimonialImg07 from "@/public/images/testimonial-07.jpg";
+// import TestimonialImg08 from "@/public/images/testimonial-08.jpg";
+// import TestimonialImg09 from "@/public/images/testimonial-09.jpg";
+// import ClientImg01 from "@/public/images/client-logo-01.svg";
+// import ClientImg02 from "@/public/images/client-logo-02.svg";
+// import ClientImg03 from "@/public/images/client-logo-03.svg";
+// import ClientImg04 from "@/public/images/client-logo-04.svg";
+// import ClientImg05 from "@/public/images/client-logo-05.svg";
+// import ClientImg06 from "@/public/images/client-logo-06.svg";
+// import ClientImg07 from "@/public/images/client-logo-07.svg";
+// import ClientImg08 from "@/public/images/client-logo-08.svg";
+// import ClientImg09 from "@/public/images/client-logo-09.svg";
+
+import Male from "@/public/images/male.png"
+import Female from "@/public/images/female.png"
 
 const testimonials = [
   {
-    img: TestimonialImg01,
-    clientImg: ClientImg01,
+    clientImg: Male,
     name: "MaKayla P.",
     company: "Disney",
     content:
@@ -33,8 +35,7 @@ const testimonials = [
     categories: [1, 3, 5],
   },
   {
-    img: TestimonialImg02,
-    clientImg: ClientImg02,
+    clientImg: Female,
     name: "Andrew K.",
     company: "Samsung",
     content:
@@ -42,8 +43,7 @@ const testimonials = [
     categories: [1, 2, 4],
   },
   {
-    img: TestimonialImg03,
-    clientImg: ClientImg03,
+    clientImg: Male,
     name: "Lucy D.",
     company: "Rio",
     content:
@@ -51,8 +51,7 @@ const testimonials = [
     categories: [1, 2, 5],
   },
   {
-    img: TestimonialImg04,
-    clientImg: ClientImg04,
+    clientImg: Male,
     name: "Pavel M.",
     company: "Canon",
     content:
@@ -60,8 +59,7 @@ const testimonials = [
     categories: [1, 4],
   },
   {
-    img: TestimonialImg05,
-    clientImg: ClientImg05,
+    clientImg: Female,
     name: "Miriam E.",
     company: "Cadbury",
     content:
@@ -69,8 +67,7 @@ const testimonials = [
     categories: [1, 3, 5],
   },
   {
-    img: TestimonialImg06,
-    clientImg: ClientImg06,
+    clientImg: Male,
     name: "Eloise V.",
     company: "Maffell",
     content:
@@ -78,8 +75,7 @@ const testimonials = [
     categories: [1, 3],
   },
   {
-    img: TestimonialImg07,
-    clientImg: ClientImg07,
+    clientImg: Female,
     name: "Pierre-Gilles L.",
     company: "Binance",
     content:
@@ -87,8 +83,7 @@ const testimonials = [
     categories: [1, 2, 5],
   },
   {
-    img: TestimonialImg08,
-    clientImg: ClientImg08,
+    clientImg: Male,
     name: "Danielle K.",
     company: "Forbes Inc.",
     content:
@@ -96,8 +91,7 @@ const testimonials = [
     categories: [1, 4],
   },
   {
-    img: TestimonialImg09,
-    clientImg: ClientImg09,
+    clientImg: Female,
     name: "Mary P.",
     company: "Ray Ban",
     content:
@@ -119,8 +113,7 @@ export default function Testimonials() {
             Don't take our word for it
           </h2>
           <p className="text-lg text-indigo-200/65">
-            We provide tech-first solutions that empower decision-makers to
-            build healthier and happier workspaces from anywhere in the world.
+          Xolve’s tech-driven solutions empower businesses with powerful trading bots, custom smart contracts, and tailored web platforms.
           </p>
         </div>
 
@@ -236,7 +229,7 @@ export function Testimonial({
   children,
 }: {
   testimonial: {
-    img: StaticImageData;
+    // company: StaticImageData;
     clientImg: StaticImageData;
     name: string;
     company: string;
@@ -251,16 +244,16 @@ export function Testimonial({
       className={`relative rounded-2xl bg-gradient-to-br from-gray-900/50 via-gray-800/25 to-gray-900/50 p-5 backdrop-blur-sm transition-opacity before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] ${!testimonial.categories.includes(category) ? "opacity-30" : ""}`}
     >
       <div className="flex flex-col gap-4">
-        <div>
-          <Image src={testimonial.clientImg} height={36} alt="Client logo" />
-        </div>
+        {/* <div>
+          <Image src={testimonial.company} height={36} alt="Client logo" />
+        </div> */}
         <p className="text-indigo-200/65 before:content-['“'] after:content-['”']">
           {children}
         </p>
         <div className="flex items-center gap-3">
           <Image
             className="inline-flex shrink-0 rounded-full"
-            src={testimonial.img}
+            src={testimonial.clientImg}
             width={36}
             height={36}
             alt={testimonial.name}
