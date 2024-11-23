@@ -1,91 +1,75 @@
 import { Marquee } from "./Marquee";
+import Image from "next/image";
 
-const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
-  },
+import eth from "../public/images/chains/eth4.png";
+import base from "../public/images/chains/base.png";
+import arb from "../public/images/chains/arb.png";
+import aptos from "../public/images/chains/aptos.png";
+import bsc from "../public/images/chains/bsc.png";
+import polygon from "../public/images/chains/pol.png";
+import op from "../public/images/chains/op.png";
+import ton from "../public/images/chains/TON.png";
+import near from "../public/images/chains/near.png";
+import avalanche from "../public/images/chains/avalanche.png";
+
+
+const chains = [
+    {
+        image: <Image src={eth} className="h-full object-contain" alt="Ethereum" width={200} height={300} />
+    },
+    {
+        image: <Image src={base} className="h-full object-contain" alt="Base" width={200} height={300} />
+    },
+    {
+        image: <Image src={arb} className="h-full object-contain" alt="Arbitrum" width={200} height={300} />
+    },
+    {
+        image: <Image src={aptos} className="h-full object-contain" alt="Aptos" width={200} height={300} />
+    },
+    {
+        image: <Image src={bsc} className="h-full object-contain" alt="Binance Smart Chain" width={200} height={300} />
+    },
+    {
+        image: <Image src={polygon} className="h-full object-contain" alt="Polygon" width={200} height={300} />
+    },
+    {
+        image: <Image src={op} className="h-full object-contain" alt="Optimism" width={200} height={300} />
+    },
+    {
+        image: <Image src={ton} className="h-full object-contain" alt="TON" width={200} height={300} />
+    },
+    {
+        image: <Image src={near} className="h-full object-contain" alt="Near" width={200} height={300} />
+    },
+    {
+        image: <Image src={avalanche} className="h-full object-contain" alt="Avalanche" width={200} height={300} />
+    },
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = chains.slice(0, chains.length / 2);
+const secondRow = chains.slice(chains.length / 2);
 
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) => {
-  return (
-    <figure
-      className="relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
-  );
-};
+
 
 export default function ChainMarquee() {
-  return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#030712] dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#030712] dark:from-background"></div>
-    </div>
-  );
+    return (
+        <div className="relative flex h-[300px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+            <Marquee pauseOnHover className="[--duration:20s]">
+                {firstRow.map((chain, i) => (
+                    <div key={i} className="flex items-center justify-center h-32 py-6 px-0">
+                        {chain.image}
+                    </div>
+                ))}
+            </Marquee>
+            <Marquee reverse pauseOnHover className="[--duration:20s]">
+                {secondRow.map((chain, i) => (
+                    <div key={i} className="flex items-center justify-center h-32 py-6 px-0">
+                        {chain.image}
+                    </div>
+                ))}
+            </Marquee>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#030712] dark:from-background"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#030712] dark:from-background"></div>
+        </div>
+    );
 }
