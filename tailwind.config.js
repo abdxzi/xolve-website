@@ -32,6 +32,8 @@ module.exports = {
       },
       animation: {
         shine: "shine 5s ease-in-out 500ms infinite",
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
       keyframes: {
         shine: {
@@ -39,6 +41,14 @@ module.exports = {
           "10%": { opacity: ".8" },
           "20%": { top: "100%", transform: "scaleY(10)", opacity: "0" },
           "100%": { top: "100%", transform: "scaleY(1)", opacity: "0" },
+        },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
         gradient: {
           to: { "background-position": "200% center" },
